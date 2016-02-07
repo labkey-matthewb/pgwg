@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportDescriptor descriptorType="rReportDescriptor" reportName="Fancy R Report" reportKey="lists/Sites" xmlns="http://labkey.org/query/xml" xmlns:rep="http://labkey.org/data/xml/reportProps">
+  <attachmentDir>Fancy R Report</attachmentDir>
+  <hidden>false</hidden>
+  <Properties>
+    <Prop name="descriptorType">rReportDescriptor</Prop>
+    <Prop name="version">15.2</Prop>
+    <Prop name="reportType">ReportService.rReport</Prop>
+    <Prop name="queryName">Sites</Prop>
+    <Prop name="schemaName">lists</Prop>
+    <Prop name="dataRegionName">query</Prop>
+    <Prop name="reportName">Fancy R Report</Prop>
+    <Prop name="cached">false</Prop>
+    <Prop name="script"># This sample code returns the query data in tab-separated values format, which LabKey then
+# renders as HTML. Replace this code with your R script. See the Help tab for more details.
+write.table(labkey.data, file = "${tsvout:tsvfile}", sep = "\t", qmethod = "double", col.names=NA)</Prop>
+    <Prop name="sourceTabVisible">false</Prop>
+    <Prop name="redirectUrl">/project/Pacific%20Groundwater%20Group/SiteDatabase/begin.view?</Prop>
+    <Prop name="runInBackground">false</Prop>
+    <Prop name="knitrFormat">None</Prop>
+    <Prop name="modified">2016-02-06</Prop>
+  </Properties>
+  <tags>
+    <rep:property>
+      <rep:propDef name="status" label="Status" type="http://www.w3.org/2001/XMLSchema#string"/>
+      <rep:propValue value="None"/>
+    </rep:property>
+    <rep:property>
+      <rep:propDef name="author" label="Author" type="http://www.w3.org/2001/XMLSchema#int"/>
+      <rep:propValue value="-1.0"/>
+    </rep:property>
+    <rep:property>
+      <rep:propDef name="thumbnailType" label="ThumbnailType" type="http://www.w3.org/2001/XMLSchema#string"/>
+      <rep:propValue value="NONE"/>
+    </rep:property>
+  </tags>
+</ReportDescriptor>

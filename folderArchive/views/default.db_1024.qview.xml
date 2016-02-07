@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customView name="" schema="lists" query="Communication" customIconUrl="/reports/grid.gif" xmlns="http://labkey.org/data/xml/queryCustomView">
+  <columns>
+    <column name="Created"/>
+    <column name="CreatedBy"/>
+    <column name="SiteID"/>
+    <column name="CommDate"/>
+    <column name="Staff"/>
+    <column name="CommType"/>
+    <column name="Comment"/>
+    <column name="InspectStatus"/>
+    <column name="FailureType"/>
+    <column name="FarmRating"/>
+    <column name="FollowUpDate"/>
+    <column name="FollowUpFor"/>
+    <column name="FollowUpNote"/>
+    <column name="OSSRating"/>
+  </columns>
+  <sorts>
+    <sort column="Created" descending="false"/>
+  </sorts>
+</customView>

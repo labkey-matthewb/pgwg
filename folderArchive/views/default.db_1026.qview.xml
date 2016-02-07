@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customView name="" schema="lists" query="BMP" customIconUrl="/reports/grid.gif" xmlns="http://labkey.org/data/xml/queryCustomView">
+  <columns>
+    <column name="Created"/>
+    <column name="CreatedBy"/>
+    <column name="SiteId"/>
+    <column name="LinearFeetOfStream"/>
+    <column name="Fencing"/>
+    <column name="LWD"/>
+    <column name="LivestockCrossing"/>
+    <column name="Comments"/>
+  </columns>
+  <sorts>
+    <sort column="Created" descending="false"/>
+  </sorts>
+</customView>

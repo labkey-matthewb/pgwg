@@ -1,0 +1,33 @@
+<style>
+DIV.site-wrap.x4-item-selected
+{
+    background-color: #eeeeee;
+}
+#gmap_canvas img
+{
+    max-width: none !important;
+    background: none !important
+}
+</style>
+
+<!-- DEPENDENCIES -->
+<script>
+LABKEY.requiresScript("/internal/jQuery/jquery-1.11.2.min.js",function(){
+  LABKEY.requiresClientAPI(function(){
+    LABKEY.requiresExt4ClientAPI(function() {
+      Ext4.onReady(start)});
+  });
+});
+</script>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<script src="/_webdav/Pacific%20Groundwater%20Group/SiteDatabase/%40files/application.js"></script>
+
+<!-- LOAD APP IN-PLACE -->
+<script type='text/javascript'>
+function start()
+{
+    start_application('applicationDiv');
+}
+</script>
+<div id='applicationDiv'>
+</div>

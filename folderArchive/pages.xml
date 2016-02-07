@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages xmlns="http://labkey.org/folder/xml">
+  <page index="2" name="DefaultDashboard" propertyString="" hidden="false">
+    <webpart>
+      <name>Wiki</name>
+      <index>1</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+    </webpart>
+    <webpart>
+      <name>Data Views</name>
+      <index>2</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+      <properties>
+        <property key="Status" value="0"/>
+        <property key="reports" value="on"/>
+        <property key="Modified" value="0"/>
+        <property key="Content Modified" value="0"/>
+        <property key="Access" value="on"/>
+        <property key="webpart.height" value="450"/>
+        <property key="queries" value="on"/>
+        <property key="Type" value="0"/>
+        <property key="Details" value="on"/>
+        <property key="webpart.title" value="Reports"/>
+        <property key="Author" value="0"/>
+        <property key="queries (inherited)" value="0"/>
+        <property key="height" value="450"/>
+        <property key="Data Cut Date" value="0"/>
+      </properties>
+    </webpart>
+  </page>
+  <page index="6" name="Support" propertyString="customTab=true" hidden="false">
+    <webpart>
+      <name>Messages</name>
+      <index>1</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+    </webpart>
+  </page>
+  <page index="4" name="Site Browser" propertyString="customTab=true" hidden="false">
+    <webpart>
+      <name>Wiki</name>
+      <index>1</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+      <properties>
+        <property key="name" value="sites_ext"/>
+        <property key="X-LABKEY-CSRF" value="b17ea5501ff3dc350beae4a5015f8aeb"/>
+      </properties>
+    </webpart>
+  </page>
+  <page index="5" name="Reports" propertyString="customTab=true" hidden="false">
+    <webpart>
+      <name>Data Views</name>
+      <index>1</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+    </webpart>
+  </page>
+  <page index="3" name="portal.default" propertyString="" hidden="false">
+    <webpart>
+      <name>Wiki</name>
+      <index>1</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+      <properties>
+        <property key="legacyPageAdded" value="true"/>
+      </properties>
+    </webpart>
+    <webpart>
+      <name>Wiki Table of Contents</name>
+      <index>2</index>
+      <location>right</location>
+      <permanent>false</permanent>
+      <properties>
+        <property key="legacyPageAdded" value="true"/>
+      </properties>
+    </webpart>
+    <webpart>
+      <name>Messages</name>
+      <index>3</index>
+      <location>!content</location>
+      <permanent>false</permanent>
+      <properties>
+        <property key="legacyPageAdded" value="true"/>
+      </properties>
+    </webpart>
+  </page>
+</pages>

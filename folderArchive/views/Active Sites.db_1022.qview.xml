@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customView name="Active Sites" schema="lists" query="Sites" customIconUrl="/reports/grid.gif" xmlns="http://labkey.org/data/xml/queryCustomView">
+  <columns>
+    <column name="LocalName"/>
+    <column name="Latitude"/>
+    <column name="Longitude"/>
+    <column name="Active"/>
+    <column name="PropertyOwner"/>
+    <column name="ParcelNumber"/>
+    <column name="Address"/>
+    <column name="ProjectArea"/>
+    <column name="FarmType"/>
+  </columns>
+  <filters>
+    <filter column="Active" operator="eq" value="1"/>
+  </filters>
+</customView>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported from LabKey Online at https://hosted.labkey.com/project/Pacific%20Groundwater%20Group/SiteDatabase/begin.view by Matthew Bellew on Sun Feb 07 09:40:23 PST 2016-->
+<tables xmlns="http://labkey.org/data/xml">
+  <table tableName="FailureType" tableDbType="TABLE">
+    <columns>
+      <column columnName="Type">
+        <datatype>varchar</datatype>
+        <columnTitle>Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <isKeyField>true</isKeyField>
+      </column>
+    </columns>
+    <pkColumnName>Type</pkColumnName>
+  </table>
+  <table tableName="ProblemStatus" tableDbType="TABLE">
+    <description>Problem Status for Issue Table</description>
+    <columns>
+      <column columnName="Status">
+        <datatype>varchar</datatype>
+        <columnTitle>Status</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <isKeyField>true</isKeyField>
+      </column>
+    </columns>
+    <pkColumnName>Status</pkColumnName>
+  </table>
+  <table tableName="OSSRating" tableDbType="TABLE">
+    <description>Lookup for Comm Table</description>
+    <columns>
+      <column columnName="Key">
+        <datatype>varchar</datatype>
+        <columnTitle>Rating</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <isKeyField>true</isKeyField>
+      </column>
+    </columns>
+    <pkColumnName>Key</pkColumnName>
+  </table>
+  <table tableName="Issue" tableDbType="TABLE">
+    <columns>
+      <column columnName="Key">
+        <datatype>integer</datatype>
+        <columnTitle>Key</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <nullable>false</nullable>
+        <isHidden>true</isHidden>
+        <isKeyField>true</isKeyField>
+        <isAutoInc>true</isAutoInc>
+      </column>
+      <column columnName="SiteId">
+        <datatype>integer</datatype>
+        <columnTitle>Site Id</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Sites</fkTable>
+          <fkColumnName>SiteId</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="FailureType">
+        <datatype>varchar</datatype>
+        <columnTitle>Failure Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>FailureType</fkTable>
+          <fkColumnName>Type</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="SystemType">
+        <datatype>varchar</datatype>
+        <columnTitle>System Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>SystemType</fkTable>
+          <fkColumnName>Key</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="ProblemStatus">
+        <datatype>varchar</datatype>
+        <columnTitle>Problem Status</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>ProblemStatus</fkTable>
+          <fkColumnName>Status</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="OccupancyType">
+        <datatype>varchar</datatype>
+        <columnTitle>Occupancy Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="NumBedrooms">
+        <datatype>double</datatype>
+        <columnTitle>Num Bedrooms</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#double</rangeURI>
+      </column>
+      <column columnName="MaxFlow">
+        <datatype>double</datatype>
+        <columnTitle>Max Flow (gpm)</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#double</rangeURI>
+      </column>
+      <column columnName="AssignedAgency">
+        <datatype>varchar</datatype>
+        <columnTitle>Assigned Agency</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="TechAssistance">
+        <datatype>varchar</datatype>
+        <columnTitle>Tech Assistance</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="Resolved">
+        <datatype>boolean</datatype>
+        <columnTitle>Resolved</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="ReturnDate">
+        <datatype>timestamp</datatype>
+        <columnTitle>Return Date</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#dateTime</rangeURI>
+      </column>
+    </columns>
+    <pkColumnName>Key</pkColumnName>
+  </table>
+  <table tableName="BMP" tableDbType="TABLE">
+    <columns>
+      <column columnName="RowId">
+        <datatype>integer</datatype>
+        <columnTitle>Row Id</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <nullable>false</nullable>
+        <isHidden>true</isHidden>
+        <isKeyField>true</isKeyField>
+        <isAutoInc>true</isAutoInc>
+      </column>
+      <column columnName="SiteId">
+        <datatype>integer</datatype>
+        <columnTitle>Site Id</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Sites</fkTable>
+          <fkColumnName>SiteId</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="LinearFeetOfStream">
+        <datatype>double</datatype>
+        <columnTitle>Linear Feet Of Stream</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#double</rangeURI>
+      </column>
+      <column columnName="Fencing">
+        <datatype>double</datatype>
+        <columnTitle>Fencing (ft)</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#double</rangeURI>
+      </column>
+      <column columnName="LWD">
+        <datatype>varchar</datatype>
+        <columnTitle>LWD</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="LivestockCrossing">
+        <datatype>boolean</datatype>
+        <columnTitle>Livestock Crossing</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="Comments">
+        <datatype>varchar</datatype>
+        <inputType>textarea</inputType>
+        <columnTitle>Comments</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#multiLine</rangeURI>
+      </column>
+    </columns>
+    <pkColumnName>RowId</pkColumnName>
+  </table>
+  <table tableName="SystemType" tableDbType="TABLE">
+    <description>System Type for Issue Table</description>
+    <columns>
+      <column columnName="Key">
+        <datatype>varchar</datatype>
+        <columnTitle>SysType</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <isKeyField>true</isKeyField>
+      </column>
+    </columns>
+    <pkColumnName>Key</pkColumnName>
+  </table>
+  <table tableName="CommType" tableDbType="TABLE">
+    <description>Lookup for Comm table</description>
+    <titleColumn>Key</titleColumn>
+    <columns>
+      <column columnName="Key">
+        <datatype>varchar</datatype>
+        <columnTitle>Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <isKeyField>true</isKeyField>
+      </column>
+    </columns>
+    <pkColumnName>Key</pkColumnName>
+  </table>
+  <table tableName="Communication" tableDbType="TABLE">
+    <columns>
+      <column columnName="Key">
+        <datatype>integer</datatype>
+        <columnTitle>Key</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <nullable>false</nullable>
+        <isHidden>true</isHidden>
+        <isKeyField>true</isKeyField>
+        <isAutoInc>true</isAutoInc>
+      </column>
+      <column columnName="SiteId">
+        <datatype>integer</datatype>
+        <columnTitle>Site Id</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>Sites</fkTable>
+          <fkColumnName>SiteId</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="CommDate">
+        <datatype>timestamp</datatype>
+        <columnTitle>Comm Date</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#dateTime</rangeURI>
+      </column>
+      <column columnName="Staff">
+        <datatype>varchar</datatype>
+        <columnTitle>Staff</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="CommType">
+        <datatype>varchar</datatype>
+        <columnTitle>Comm Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>CommType</fkTable>
+          <fkColumnName>Key</fkColumnName>
+        </fk>
+      </column>
+      <column columnName="Comment">
+        <datatype>varchar</datatype>
+        <inputType>textarea</inputType>
+        <columnTitle>Comment</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#multiLine</rangeURI>
+      </column>
+      <column columnName="InspectStatus">
+        <datatype>varchar</datatype>
+        <columnTitle>Inspect Status</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="FailureType">
+        <datatype>varchar</datatype>
+        <columnTitle>Failure Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="FarmRating">
+        <datatype>varchar</datatype>
+        <columnTitle>Farm Rating</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="FollowUpDate">
+        <datatype>timestamp</datatype>
+        <columnTitle>Follow Up Date</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#dateTime</rangeURI>
+      </column>
+      <column columnName="FollowUpFor">
+        <datatype>varchar</datatype>
+        <columnTitle>Follow Up For</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="FollowUpNote">
+        <datatype>varchar</datatype>
+        <inputType>textarea</inputType>
+        <columnTitle>Follow Up Note</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#multiLine</rangeURI>
+      </column>
+      <column columnName="OSSRating">
+        <datatype>varchar</datatype>
+        <columnTitle>OSSRating</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>OSSRating</fkTable>
+          <fkColumnName>Key</fkColumnName>
+        </fk>
+      </column>
+    </columns>
+    <pkColumnName>Key</pkColumnName>
+  </table>
+  <table tableName="FarmType" tableDbType="TABLE">
+    <columns>
+      <column columnName="FarmType">
+        <datatype>varchar</datatype>
+        <columnTitle>Farm Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <nullable>false</nullable>
+        <isKeyField>true</isKeyField>
+      </column>
+    </columns>
+    <pkColumnName>FarmType</pkColumnName>
+  </table>
+  <table tableName="Sites" tableDbType="TABLE">
+    <columns>
+      <column columnName="SiteId">
+        <datatype>integer</datatype>
+        <columnTitle>Site Id</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#int</rangeURI>
+        <nullable>false</nullable>
+        <isHidden>true</isHidden>
+        <isKeyField>true</isKeyField>
+        <isAutoInc>true</isAutoInc>
+      </column>
+      <column columnName="Latitude">
+        <datatype>double</datatype>
+        <columnTitle>Latitude</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#double</rangeURI>
+      </column>
+      <column columnName="Longitude">
+        <datatype>double</datatype>
+        <columnTitle>Longitude</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#double</rangeURI>
+      </column>
+      <column columnName="LocalName">
+        <datatype>varchar</datatype>
+        <columnTitle>Local Name</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="Active">
+        <datatype>boolean</datatype>
+        <columnTitle>Active?</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#boolean</rangeURI>
+      </column>
+      <column columnName="PropertyOwner">
+        <datatype>varchar</datatype>
+        <columnTitle>Property Owner</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="ParcelNumber">
+        <datatype>varchar</datatype>
+        <columnTitle>Parcel Number</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="Address">
+        <datatype>varchar</datatype>
+        <columnTitle>Address</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="ProjectArea">
+        <datatype>varchar</datatype>
+        <columnTitle>Project Area</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+      </column>
+      <column columnName="FarmType">
+        <datatype>varchar</datatype>
+        <columnTitle>Farm Type</columnTitle>
+        <rangeURI>http://www.w3.org/2001/XMLSchema#string</rangeURI>
+        <fk>
+          <fkDbSchema>lists</fkDbSchema>
+          <fkTable>FarmType</fkTable>
+          <fkColumnName>FarmType</fkColumnName>
+        </fk>
+      </column>
+    </columns>
+    <pkColumnName>SiteId</pkColumnName>
+  </table>
+</tables>

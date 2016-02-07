@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exported from LabKey Online at https://hosted.labkey.com/project/Pacific%20Groundwater%20Group/SiteDatabase/begin.view by Matthew Bellew on Sun Feb 07 09:40:24 PST 2016-->
+<folder archiveVersion="15.2" label="SiteDatabase" type="normal" title="Site Database" xmlns="http://labkey.org/folder/xml" xmlns:ns="http://labkey.org/study/xml">
+  <folderType name="Collaboration">
+    <defaultModule>Core</defaultModule>
+    <modules>
+      <moduleName>Announcements</moduleName>
+      <moduleName>Wiki</moduleName>
+      <moduleName>Query</moduleName>
+      <moduleName>Issues</moduleName>
+      <moduleName>Experiment</moduleName>
+      <moduleName>Pipeline</moduleName>
+      <moduleName>FileContent</moduleName>
+      <moduleName>Core</moduleName>
+    </modules>
+  </folderType>
+  <searchable>true</searchable>
+  <pages file="pages.xml"/>
+  <moduleProperties/>
+  <wikis dir="wikis"/>
+  <lists dir="lists"/>
+  <views dir="views"/>
+  <reports dir="reports"/>
+  <missingValueIndicators>
+    <ns:missingValueIndicator indicator="Q" label="Data currently under quality control review."/>
+    <ns:missingValueIndicator indicator="N" label="Required field marked by site as 'data not available'."/>
+  </missingValueIndicators>
+</folder>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customView name="" schema="lists" query="Issue" customIconUrl="/reports/grid.gif" xmlns="http://labkey.org/data/xml/queryCustomView">
+  <columns>
+    <column name="Created"/>
+    <column name="CreatedBy"/>
+    <column name="SiteID"/>
+    <column name="FailureType"/>
+    <column name="SystemType"/>
+    <column name="ProblemStatus"/>
+    <column name="OccupancyType"/>
+    <column name="NumBedrooms"/>
+    <column name="MaxFlow"/>
+    <column name="AssignedAgency"/>
+    <column name="TechAssistance"/>
+    <column name="Resolved"/>
+    <column name="ReturnDate"/>
+  </columns>
+  <sorts>
+    <sort column="Created" descending="false"/>
+  </sorts>
+</customView>

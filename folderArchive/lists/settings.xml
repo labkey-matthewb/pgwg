@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists xmlns="http://labkey.org/list/xml">
+  <list name="FailureType" id="5" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="ProblemStatus" id="7" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="OSSRating" id="12" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Issue" id="8" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="BMP" id="3" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="SystemType" id="6" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="CommType" id="11" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Communication" id="9" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="FarmType" id="1" entireListIndex="true" entireListIndexSetting="2"/>
+  <list name="Sites" id="2" discussions="1" eachItemIndex="true" eachItemTitleSetting="1" entireListIndex="true" entireListIndexSetting="2"/>
+</lists>
